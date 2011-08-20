@@ -1,13 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <RelativeLayout android:id="@+id/relativeLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
-        <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/button1" android:layout_alignTop="@+id/editText1" android:layout_alignParentRight="true" android:text="@string/locate"></Button>
-        <EditText android:id="@+id/editText1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/textView2" android:layout_alignParentLeft="true" android:layout_marginTop="15dp" android:layout_alignRight="@+id/editText2"></EditText>
-        <EditText android:id="@+id/editText2" android:layout_height="wrap_content" android:layout_width="wrap_content" android:inputType="numberDecimal" android:layout_below="@+id/textView1" android:layout_toLeftOf="@+id/button1" android:layout_marginTop="16dp" android:layout_alignParentLeft="true">
-            <requestFocus></requestFocus>
-        </EditText>
-        <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/button2" android:layout_alignParentBottom="true" android:layout_marginBottom="24dp" android:layout_alignLeft="@+id/textView3" android:layout_alignRight="@+id/editText2" android:text="@string/submit"></Button>
-        <DatePicker android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/datePicker1" android:layout_below="@+id/textView3" android:layout_alignParentLeft="true" android:layout_marginTop="20dp"></DatePicker>
-        <TextView android:text="@string/particulars" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:id="@+id/textView2" android:layout_alignParentTop="true" android:layout_alignParentLeft="true" android:layout_marginLeft="16dp"></TextView>
-        <TextView android:text="@string/amount" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:id="@+id/textView1" android:layout_below="@+id/editText1" android:layout_alignLeft="@+id/textView2" android:layout_marginTop="14dp"></TextView>
-        <TextView android:text="@string/date" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="wrap_content" android:id="@+id/textView3" android:layout_below="@+id/editText2" android:layout_alignLeft="@+id/textView1" android:layout_marginTop="18dp"></TextView>
-    </RelativeLayout>
+<RelativeLayout
+	android:id="@+id/relativeLayout1"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<TextView
+		android:id="@+id/text1"
+		android:text="@string/particulars"
+		android:textSize="16dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true" />
+	<EditText
+		android:id="@+id/edit1"
+		android:layout_below="@id/text1"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_marginTop="5dp" />
+	<TextView
+		android:id="@+id/text2"
+		android:text="@string/amount"
+		android:textSize="16dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/edit1"
+		android:layout_alignParentLeft="true"
+		android:layout_marginTop="5dp" />
+	<EditText
+		android:id="@+id/edit2"
+		android:layout_below="@id/text2"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:numeric="decimal"
+		android:layout_alignParentLeft="true"
+		android:layout_marginTop="5dp" />
+	<TextView
+		android:id="@+id/text3"
+		android:text="@string/date"
+		android:textSize="16dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/edit2"
+		android:layout_alignParentLeft="true"
+		android:layout_marginTop="5dp" />
+	<DatePicker
+		android:id="@+id/date1"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/text3"
+		android:layout_alignParentLeft="true"
+		android:layout_marginTop="5dp" />
+	<Button
+		android:id="@+id/button1"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Save"
+		android:textSize="16dp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true" />
+</RelativeLayout>

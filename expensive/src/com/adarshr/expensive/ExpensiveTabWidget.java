@@ -33,6 +33,12 @@ public class ExpensiveTabWidget extends TabActivity {
                 res.getDrawable(R.drawable.ic_tab_history))
                 .setContent(intent);
         tabHost.addTab(spec);
+        
+        intent = new Intent().setClass(this, ReportsActivity.class);
+        spec = tabHost.newTabSpec("reports").setIndicator("Reports",
+                res.getDrawable(R.drawable.ic_tab_reports))
+                .setContent(intent);
+        tabHost.addTab(spec);
 
         tabHost.setCurrentTab(0);
     }

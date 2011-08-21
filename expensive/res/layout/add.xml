@@ -11,20 +11,34 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_alignParentLeft="true" />
-	<EditText
-		android:id="@+id/edit1"
-		android:layout_below="@id/text1"
+	<LinearLayout
+		android:id="@+id/linearlayout1"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:layout_alignParentLeft="true"
-		android:layout_marginTop="5dp" />
+		android:layout_below="@id/text1"
+		android:layout_marginTop="5dp"
+		android:weightSum="1.0">
+		<EditText
+			android:id="@+id/edit1"
+			android:layout_weight="1.0"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="5dp" />
+		<Button
+			android:id="@+id/locate"
+			android:background="@drawable/locate"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+	</LinearLayout>
 	<TextView
 		android:id="@+id/text2"
 		android:text="@string/amount"
 		android:textSize="16dp"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@id/edit1"
+		android:layout_below="@id/linearlayout1"
 		android:layout_alignParentLeft="true"
 		android:layout_marginTop="5dp" />
 	<EditText
